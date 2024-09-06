@@ -63,9 +63,11 @@ jobs:
           pip install mkdocs
           pip install mkdocs-material
       - name: Build and Deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           mkdocs build
-          mkdocs gh-deploy --force --token ${{ secrets.GH_TOKEN }}
+          mkdocs gh-deploy --force 
 
   deploy:
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags') && github.repository == 'work_tools'
