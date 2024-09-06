@@ -10,6 +10,7 @@ def file_counter_fixture():
     """Fixture to create a FileCounter instance."""
     return FileCounter()
 
+# pylint: disable=redefined-outer-name
 def test_count_files_without_return(
         file_counter_fixture: FileCounter
     )->None:
