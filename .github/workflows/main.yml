@@ -64,6 +64,8 @@ jobs:
           pip install mkdocs-material
           pip install mkdocstrings
           pip install mkdocstrings-python
+          pip install -U poetry
+          poetry install -v
       - name: Setup Git
         run: |
           git config user.name github-actions
