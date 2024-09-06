@@ -62,6 +62,18 @@ jobs:
         run: |
           pip install mkdocs
           pip install mkdocs-material
+      - name: Setup Git
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - name: Sync with remote gh-pages branch
+        run: |
+          git fetch origin gh-pages:gh-pages
+          git checkout gh-pages
+          git pull origin gh-pages
+      - name: Checkout to main branch
+        run: |
+          git checkout main
       - name: Build and Deploy
         run: |
           mkdocs build
