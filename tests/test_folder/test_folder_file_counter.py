@@ -19,3 +19,12 @@ def test_count_files_without_return(
     file_counter_fixture.count_files("tests")
     file_counter_fixture.count_files("tests", ".py")
     file_counter_fixture.count_files("tests", [".py",".txt",".yml"], True)
+
+# pylint: disable=redefined-outer-name
+def test_count_files_with_return(
+        file_counter_fixture: FileCounter
+    )->None:
+    """Test counting files without specifying an extension."""
+    assert len(file_counter_fixture.count_files_dict("tests")) == 2
+    assert len(file_counter_fixture.count_files_dict("tests", ".py")) == 1
+    assert file_counter_fixture.count_files_dict("tests", [".py",".txt",".yml"], True) == {'.py': 5,'.yml': 1}
