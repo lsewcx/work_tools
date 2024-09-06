@@ -11,10 +11,10 @@ def file_counter_fixture():
     return FileCounter()
 
 def test_count_files_without_return(
-        fc_fixture: FileCounter  # 修改参数名以避免名称冲突
+        file_counter_fixture: FileCounter
     )->None:
     """Test counting files without specifying an extension."""
     # 假设你的 count_files 方法返回文件数量
-    fc_fixture.count_files("tests")
-    fc_fixture.count_files("tests", ".py")
-    fc_fixture.count_files("tests", [".py",".txt",".yml"], True)
+    file_counter_fixture.count_files("tests")
+    file_counter_fixture.count_files("tests", ".py")
+    file_counter_fixture.count_files("tests", [".py",".txt",".yml"], True)
