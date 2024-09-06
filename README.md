@@ -1,12 +1,12 @@
-# work_tools
+# 工作工具
+[English](README-en.md) | [中文](README.md)
+## 1. 概览
 
-## 1. Overview
+工作中常用的工具
 
-A commonly used tool at work
+## 2. 使用方法
 
-## 2. Usage
-
-### 2.1 init project
+### 2.1 初始化项目
 
 ```bash
 poetry install -v
@@ -18,6 +18,5 @@ TODO
 
 ## 3. Develop
 
-You may need to read the [develop document](./docs/development.md) to use SRC Layout in your IDE.
+您可能需要阅读开发文档以在IDE中使用SRC布局。
 
-[English](README.md) | [中文](README-cn.md)
