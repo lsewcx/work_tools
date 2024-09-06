@@ -30,3 +30,9 @@ pylint tests src
 ```bash
 pytest
 ```
+
+### 上传
+```bash
+git cz
+git push
+```
