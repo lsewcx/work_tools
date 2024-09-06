@@ -4,6 +4,7 @@ import pytest
 
 from src.work_tools.folder.folder_file_counter import FileCounter
 
+
 @pytest.fixture
 def get_file_counter_fixture():
     """Fixture to create a FileCounter instance."""

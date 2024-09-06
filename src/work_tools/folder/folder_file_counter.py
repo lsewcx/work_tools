@@ -8,6 +8,7 @@ from typing import List, Optional, Union
 
 from loguru import logger
 
+
 class FileCounter:
     """
     用于统计指定目录下的文件数量。
