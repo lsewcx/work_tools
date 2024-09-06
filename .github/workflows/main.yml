@@ -65,7 +65,7 @@ jobs:
       - name: Build and Deploy
         run: |
           mkdocs build
-          mkdocs gh-deploy --force 
+          mkdocs gh-deploy
 
   deploy:
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags') && github.repository == 'work_tools'
