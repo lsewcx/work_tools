@@ -178,3 +178,6 @@ venv.bak/
 .idea
 
 node_modules/
+.husky/
+.pytest_cache/
+.tox

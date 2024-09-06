@@ -54,6 +54,18 @@ jobs:
       - run: |
           tox -e isort
           tox -e pylint
+  mkdocs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          pip install mkdocs
+          pip install mkdocs-material
+      - name: Build and Deploy
+        run: |
+          mkdocs build
+          mkdocs gh-deploy
 
   deploy:
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags') && github.repository == 'work_tools'
