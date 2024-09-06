@@ -10,6 +10,7 @@
 
 ```bash
 poetry install -v
+```
 
 ### 2.2 usage
 
