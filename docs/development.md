@@ -46,6 +46,10 @@ pylint tests src
 pytest
 ```
 
+### 文档
+
+如果你添加的是新功能，编写 markdown 文件参照别的 markdown 的标准会通过函数的注释自动生成文档
+
 ### 上传
 
 ```bash

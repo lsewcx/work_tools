@@ -6,9 +6,9 @@ use_directory_urls: false
 plugins:
   - search
   - mkdocstrings:
+      watch:
+        - work_tools
       handlers:
         python:
           rendering:
             show_source: true
-
-
