@@ -18,7 +18,7 @@ class FileCounter:
         """
         初始化 FileCounter 实例。
         """
-        
+
     def __doc__(self):
         print(self.__doc__)
 

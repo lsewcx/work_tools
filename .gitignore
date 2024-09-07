@@ -177,7 +177,5 @@ venv.bak/
 ### Jebrains template
 .idea
 
-node_modules/
-.husky/
 .pytest_cache/
 .tox
