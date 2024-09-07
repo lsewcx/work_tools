@@ -79,8 +79,8 @@ jobs:
           git checkout main
       - name: Build and Deploy
         run: |
-          mkdocs build -v
-          mkdocs gh-deploy
+          poetry run mkdocs build -v
+          poetry run mkdocs gh-deploy
 
   deploy:
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags') && github.repository == 'work_tools'
